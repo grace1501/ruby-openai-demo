@@ -34,6 +34,8 @@ while user_input != "bye"
       }
     )
 
+    pp api_response
+
     # Dig through the JSON response to get the content
     choices = api_response.fetch("choices")
     first_choice = choices.at(0)
@@ -48,5 +50,6 @@ while user_input != "bye"
     message_list.push({ "role" => "assistant", "content" => assistant_response })
   end
 end
+
 
 puts "Goodbye! Have a great day!"
